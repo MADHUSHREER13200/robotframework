@@ -11,6 +11,6 @@ TC1 Valid Login
      Input Text  id=edit-field-lname pass
      Input Text  id=edit-mail    admin@gmail.com
      Input Text  id=edit-field-company-name-registration     Google
-     Click Element   xpath=//select[@id='edit-field-business-focus-reg']/option[@value='51']
-     #Input Text     id=edit-captcha-response
-     Click Element   id=edit-submit--2
+     Click Element   id='edit-field-business-focus-reg   IT Consulting
+     Click Element   name=op
+     Close Browser
