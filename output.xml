@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220209 08:51:28.501" rpa="false" schemaversion="2">
+<suite id="s1" name="Robotic Project" source="C:\Users\Ramesh\Desktop\robotic project">
+<suite id="s1-s1" name="Selenium Suit" source="C:\Users\Ramesh\Desktop\robotic project\selenium_suit">
+<suite id="s1-s1-s1" name="Orangetask Suit" source="C:\Users\Ramesh\Desktop\robotic project\selenium_suit\orangetask_suit.robot">
+<test id="s1-s1-s1-t1" name="Tc1 Valid Login">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<arg>path</arg>
+<arg>${EXECDIR}\\drivers</arg>
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<msg timestamp="20220209 08:51:31.561" level="INFO">Environment variable 'path' set to value 'C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\java\jdk1.8.0_291\bin;C:\java\jdk1.8.0_291\bin;C:\Users\Ramesh\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Ramesh\AppData\Local\Programs\Python\Python310\;C:\Program Files\Java\jdk1.8.0_321\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.3.2\bin;;C:\Users\Ramesh\Desktop\robotic project\drivers'.</msg>
+<status status="PASS" starttime="20220209 08:51:31.551" endtime="20220209 08:51:31.561"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=https://opensource-demo.orangehrmlive.com/</arg>
+<arg>browser=edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220209 08:51:31.562" level="INFO">Opening browser 'edge' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20220209 08:51:31.562" endtime="20220209 08:52:25.155"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=txtUsername</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220209 08:52:25.156" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20220209 08:52:25.156" endtime="20220209 08:52:25.730"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=txtPassword</arg>
+<arg>admin123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220209 08:52:25.731" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
+<msg timestamp="20220209 08:52:25.806" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220209 08:52:25.907" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220209 08:52:25.731" endtime="20220209 08:52:25.907"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name=Submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220209 08:52:25.908" level="INFO">Clicking element 'name=Submit'.</msg>
+<status status="PASS" starttime="20220209 08:52:25.908" endtime="20220209 08:52:27.718"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Emergency Contacts</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220209 08:52:27.719" level="INFO">Clicking element 'link=Emergency Contacts'.</msg>
+<msg timestamp="20220209 08:52:50.178" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220209 08:52:50.292" level="FAIL">Element with locator 'link=Emergency Contacts' not found.</msg>
+<status status="FAIL" starttime="20220209 08:52:27.718" endtime="20220209 08:52:50.292"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=btnAddContact</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220209 08:52:50.293" endtime="20220209 08:52:50.293"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=emgcontacts_name</arg>
+<arg>XYZ</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220209 08:52:50.293" endtime="20220209 08:52:50.293"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=emgcontacts_relationship</arg>
+<arg>Mother</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220209 08:52:50.293" endtime="20220209 08:52:50.293"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=emgcontacts[homePhone]</arg>
+<arg>081736682</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220209 08:52:50.294" endtime="20220209 08:52:50.294"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=emgcontacts[mobilePhone]</arg>
+<arg>7349106090</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220209 08:52:50.294" endtime="20220209 08:52:50.294"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=btnSaveContact</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220209 08:52:50.294" endtime="20220209 08:52:50.294"/>
+</kw>
+<status status="FAIL" starttime="20220209 08:51:31.551" endtime="20220209 08:52:50.294">Element with locator 'link=Emergency Contacts' not found.</status>
+</test>
+<status status="FAIL" starttime="20220209 08:51:28.812" endtime="20220209 08:52:50.305"/>
+</suite>
+<status status="FAIL" starttime="20220209 08:51:28.802" endtime="20220209 08:52:50.307"/>
+</suite>
+<status status="FAIL" starttime="20220209 08:51:28.515" endtime="20220209 08:52:50.308"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robotic Project">Robotic Project</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Selenium Suit">Robotic Project.Selenium Suit</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Orangetask Suit">Robotic Project.Selenium Suit.Orangetask Suit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
