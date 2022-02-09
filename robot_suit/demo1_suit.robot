@@ -3,7 +3,7 @@ Library  DateTime
 
 *** Test Cases ***
 Tc1 print Name
-     Log To Console     hello,everyone
+     Log To Console     ${EXECDIR}\\drivers\\edgedriver
      Log To Console     Madhuri
 
 Tc2 print Date
@@ -12,7 +12,7 @@ Tc2 print Date
 
 
 Tc3 Store Data
-      Set Local Variable    ${name}         Darshu
+      Set Local Variable    ${name}         Madhuri
       Log To Console    ${name}
       Log   hello,${name}
       ${titel}  Set Variable        robotframework
