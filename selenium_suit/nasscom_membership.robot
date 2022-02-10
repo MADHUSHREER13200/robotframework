@@ -14,4 +14,9 @@ TC1
      Click Element    link=Calculate Membership Fee
      ${alert_text}   Handle Alert     action=ACCEPT
      Log To Console    ${alert_text}
+     Alert Should Be Present     Please enter  amount in digit and greater than zero.     action=ACCEPT
+
+     Choose File  id=edit-field-memorandum-article-of-asso-und-O-upload  file_path=C:\\Users\\Ramesh\\Desktop\\Internship certificate.pdf
+
+     Sleep  25s
      Close Browser
