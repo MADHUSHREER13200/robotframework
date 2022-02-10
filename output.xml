@@ -1,110 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 14:55:39.847" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 17:12:37.337" rpa="false" schemaversion="2">
 <suite id="s1" name="Robotic Project" source="C:\Users\Ramesh\Desktop\robotic project">
 <suite id="s1-s1" name="Selenium Suit" source="C:\Users\Ramesh\Desktop\robotic project\selenium_suit">
-<suite id="s1-s1-s1" name="Nasscom Membership" source="C:\Users\Ramesh\Desktop\robotic project\selenium_suit\nasscom_membership.robot">
+<suite id="s1-s1-s1" name="Selenium Suit" source="C:\Users\Ramesh\Desktop\robotic project\selenium_suit\selenium_suit.robot">
 <test id="s1-s1-s1-t1" name="TC1">
-<kw name="Append To Environment Variable" library="OperatingSystem">
-<arg>path</arg>
-<arg>${EXECDIR}\\drivers</arg>
-<doc>Appends given ``values`` to environment variable ``name``.</doc>
-<msg timestamp="20220210 14:55:40.482" level="INFO">Environment variable 'path' set to value 'C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\java\jdk1.8.0_291\bin;C:\java\jdk1.8.0_291\bin;C:\Program Files\Git\cmd;C:\Users\Ramesh\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Ramesh\AppData\Local\Programs\Python\Python310\;C:\Program Files\Java\jdk1.8.0_321\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.3.2\bin;;C:\Users\Ramesh\Desktop\robotic project\drivers'.</msg>
-<status status="PASS" starttime="20220210 14:55:40.481" endtime="20220210 14:55:40.482"/>
-</kw>
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>url=https://nasscom.in/nasscom-membership</arg>
 <arg>browser=edge</arg>
+<arg>executable_path=${EXECDIR}\\drivers\\msedgedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220210 14:55:40.483" level="INFO">Opening browser 'edge' to base url 'https://nasscom.in/nasscom-membership'.</msg>
-<status status="PASS" starttime="20220210 14:55:40.482" endtime="20220210 14:56:47.608"/>
+<msg timestamp="20220210 17:12:38.886" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
+<status status="PASS" starttime="20220210 17:12:38.886" endtime="20220210 17:12:49.242"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220210 14:56:47.609" endtime="20220210 14:56:47.755"/>
+<status status="PASS" starttime="20220210 17:12:49.244" endtime="20220210 17:12:49.499"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>5s</arg>
+<arg>30s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220210 14:56:47.755" endtime="20220210 14:56:47.779"/>
+<status status="PASS" starttime="20220210 17:12:49.499" endtime="20220210 17:12:49.527"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=edit-field-membership-type-und-1203</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220210 14:56:47.780" level="INFO">Clicking element 'id=edit-field-membership-type-und-1203'.</msg>
-<status status="PASS" starttime="20220210 14:56:47.779" endtime="20220210 14:56:48.590"/>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220210 17:12:49.527" endtime="20220210 17:12:49.529"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=edit-field-business-focus-inst-und-966</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220210 14:56:48.590" level="INFO">Clicking element 'id=edit-field-business-focus-inst-und-966'.</msg>
-<status status="PASS" starttime="20220210 14:56:48.590" endtime="20220210 14:56:48.835"/>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=https://demo.openemr.io/b/openemr/index.php</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220210 17:12:49.533" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/index.php'</msg>
+<status status="PASS" starttime="20220210 17:12:49.530" endtime="20220210 17:12:57.025"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=edit-field-business-focus-inst-und-970</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220210 14:56:48.836" level="INFO">Clicking element 'id=edit-field-business-focus-inst-und-970'.</msg>
-<status status="PASS" starttime="20220210 14:56:48.835" endtime="20220210 14:56:48.924"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=authUser</arg>
+<arg>admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220210 17:12:57.027" level="INFO">Typing text 'admin' into text field 'id=authUser'.</msg>
+<status status="PASS" starttime="20220210 17:12:57.026" endtime="20220210 17:13:00.356"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>link=Calculate Membership Fee</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220210 14:56:48.925" level="INFO">Clicking element 'link=Calculate Membership Fee'.</msg>
-<status status="PASS" starttime="20220210 14:56:48.925" endtime="20220210 14:56:49.697"/>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20220210 17:13:00.357" endtime="20220210 17:13:02.696"/>
 </kw>
-<kw name="Handle Alert" library="SeleniumLibrary">
-<var>${alert_text}</var>
-<arg>action=ACCEPT</arg>
-<doc>Handles the current alert and returns its message.</doc>
-<msg timestamp="20220210 14:56:49.697" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<msg timestamp="20220210 14:56:49.709" level="INFO">${alert_text} = Please enter amount in digit and greater than zero.</msg>
-<status status="PASS" starttime="20220210 14:56:49.697" endtime="20220210 14:56:49.710"/>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=clearPass</arg>
+<arg>Pass</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220210 17:13:02.698" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20220210 17:13:04.878" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220210 17:13:06.111" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220210 17:13:02.697" endtime="20220210 17:13:06.112"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>name=languageChoice</arg>
+<arg>English (Indian)</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220210 17:13:06.115" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
+<status status="PASS" starttime="20220210 17:13:06.113" endtime="20220210 17:13:16.238"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${appdesc}</var>
+<arg>xpath=//p[contains(text(),'most')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220210 17:13:18.370" level="INFO">${appdesc} = The most popular open-source Electronic Health Record and Medical Practice Management solution.</msg>
+<status status="PASS" starttime="20220210 17:13:16.239" endtime="20220210 17:13:18.371"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${alert_text}</arg>
+<arg>${appdesc}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220210 14:56:49.710" endtime="20220210 14:56:49.711"/>
+<status status="PASS" starttime="20220210 17:13:18.373" endtime="20220210 17:13:18.375"/>
 </kw>
-<kw name="Alert Should Be Present" library="SeleniumLibrary">
-<arg>Please enter</arg>
-<arg>amount in digit and greater than zero.</arg>
-<arg>action=ACCEPT</arg>
-<doc>Verifies that an alert is present and by default, accepts it.</doc>
-<msg timestamp="20220210 14:56:49.713" level="FAIL">Keyword 'SeleniumLibrary.Alert Should Be Present' got multiple values for argument 'action'.</msg>
-<status status="FAIL" starttime="20220210 14:56:49.712" endtime="20220210 14:56:49.713"/>
+<kw name="Get Selected List Label" library="SeleniumLibrary">
+<var>${selecteddropdownlabel}</var>
+<arg>name=languageChoice</arg>
+<doc>Returns the label of selected option from selection list ``locator``.</doc>
+<msg timestamp="20220210 17:13:40.375" level="INFO">${selecteddropdownlabel} = English (Indian)</msg>
+<status status="PASS" starttime="20220210 17:13:18.375" endtime="20220210 17:13:40.376"/>
 </kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=edit-field-memorandum-article-of-asso-und-O-upload</arg>
-<arg>file_path=C:\\Users\\Ramesh\\Desktop\\Internship certificate.pdf</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="NOT RUN" starttime="20220210 14:56:49.714" endtime="20220210 14:56:49.714"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${selecteddropdownlabel}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220210 17:13:40.378" endtime="20220210 17:13:40.382"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>25s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220210 14:56:49.715" endtime="20220210 14:56:49.715"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20220210 14:56:49.715" endtime="20220210 14:56:49.715"/>
-</kw>
-<status status="FAIL" starttime="20220210 14:55:40.480" endtime="20220210 14:56:49.716">Keyword 'SeleniumLibrary.Alert Should Be Present' got multiple values for argument 'action'.</status>
+<status status="PASS" starttime="20220210 17:12:38.885" endtime="20220210 17:13:40.385"/>
 </test>
-<status status="FAIL" starttime="20220210 14:55:39.916" endtime="20220210 14:56:49.717"/>
+<status status="PASS" starttime="20220210 17:12:37.491" endtime="20220210 17:13:40.401"/>
 </suite>
-<status status="FAIL" starttime="20220210 14:55:39.913" endtime="20220210 14:56:49.721"/>
+<status status="PASS" starttime="20220210 17:12:37.485" endtime="20220210 17:13:40.439"/>
 </suite>
-<status status="FAIL" starttime="20220210 14:55:39.859" endtime="20220210 14:56:49.724"/>
+<status status="PASS" starttime="20220210 17:12:37.343" endtime="20220210 17:13:40.476"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Robotic Project">Robotic Project</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Selenium Suit">Robotic Project.Selenium Suit</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Nasscom Membership">Robotic Project.Selenium Suit.Nasscom Membership</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robotic Project">Robotic Project</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Selenium Suit">Robotic Project.Selenium Suit</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Selenium Suit">Robotic Project.Selenium Suit.Selenium Suit</stat>
 </suite>
 </statistics>
 <errors>
