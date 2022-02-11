@@ -1,580 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220211 11:39:23.041" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220211 11:48:31.780" rpa="false" schemaversion="2">
 <suite id="s1" name="Robotic Project" source="C:\Users\Ramesh\Desktop\robotic project">
-<suite id="s1-s1" name="Advance Suit" source="C:\Users\Ramesh\Desktop\robotic project\advance_suit">
-<suite id="s1-s1-s1" name="Advance Selenium" source="C:\Users\Ramesh\Desktop\robotic project\advance_suit\advance_selenium.robot">
+<suite id="s1-s1" name="Robot Suit" source="C:\Users\Ramesh\Desktop\robotic project\robot_suit">
+<suite id="s1-s1-s1" name="Demo4 Suit" source="C:\Users\Ramesh\Desktop\robotic project\robot_suit\demo4_suit.robot">
 <test id="s1-s1-s1-t1" name="TC1">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=edge</arg>
-<arg>executable_path=${EXECDIR}\\drivers\\msedgedriver.exe</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220211 11:39:23.530" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
-<status status="PASS" starttime="20220211 11:39:23.529" endtime="20220211 11:39:30.158"/>
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${val1}</arg>
+<arg>$120,000,000</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220211 11:48:31.852" level="INFO">${val1} = $120,000,000</msg>
+<status status="PASS" starttime="20220211 11:48:31.849" endtime="20220211 11:48:31.853"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220211 11:39:30.159" endtime="20220211 11:39:30.386"/>
+<kw name="Set Variable" library="BuiltIn">
+<var>${val2}</var>
+<arg>$900,000</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220211 11:48:31.853" level="INFO">${val2} = $900,000</msg>
+<status status="PASS" starttime="20220211 11:48:31.853" endtime="20220211 11:48:31.854"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>30s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220211 11:39:30.386" endtime="20220211 11:39:30.389"/>
-</kw>
-<kw name="Set Window Size" library="SeleniumLibrary">
-<arg>600</arg>
-<arg>800</arg>
-<doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20220211 11:39:30.389" endtime="20220211 11:39:30.793"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=http://google.com/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220211 11:39:30.796" level="INFO">Opening url 'http://google.com/'</msg>
-<status status="PASS" starttime="20220211 11:39:30.794" endtime="20220211 11:39:47.328"/>
-</kw>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${linkcount}</var>
-<arg>tag=a</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20220211 11:39:47.482" level="INFO">${linkcount} = 25</msg>
-<status status="PASS" starttime="20220211 11:39:47.329" endtime="20220211 11:39:47.482"/>
+<kw name="Remove String">
+<var>${val1}</var>
+<arg>${val1}</arg>
+<arg>$</arg>
+<msg timestamp="20220211 11:48:31.858" level="FAIL">No keyword with name 'Remove String' found.</msg>
+<status status="FAIL" starttime="20220211 11:48:31.858" endtime="20220211 11:48:31.858"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${linkcount}</arg>
+<arg>${val1}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:47.482" endtime="20220211 11:39:47.483"/>
+<status status="NOT RUN" starttime="20220211 11:48:31.859" endtime="20220211 11:48:31.859"/>
 </kw>
-<kw name="Get WebElements" library="SeleniumLibrary">
-<var>@{elements}</var>
-<arg>tag=a</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<msg timestamp="20220211 11:39:47.496" level="INFO">@{elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="6d29f3fe7c658d32b9da1b29249e5dbd", element="f87fb3a8-8f57-4465-85e9-30f46c59b33a")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
-<status status="PASS" starttime="20220211 11:39:47.484" endtime="20220211 11:39:47.496"/>
-</kw>
-<for flavor="IN RANGE">
-<var>${i}</var>
-<value>0</value>
-<value>${linkcount}</value>
-<value>1</value>
-<iter>
-<var name="${i}">0</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${elements}[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:47.831" level="INFO">${text} = Gmail</msg>
-<status status="PASS" starttime="20220211 11:39:47.497" endtime="20220211 11:39:47.831"/>
+<kw name="Remove String">
+<var>${val2}</var>
+<arg>${val2}</arg>
+<arg>$</arg>
+<status status="NOT RUN" starttime="20220211 11:48:31.862" endtime="20220211 11:48:31.862"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
+<arg>${val2}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:47.831" endtime="20220211 11:39:47.831"/>
+<status status="NOT RUN" starttime="20220211 11:48:31.862" endtime="20220211 11:48:31.862"/>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<arg>Click Element</arg>
-<arg>${elements}[${i}]</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:47.832" endtime="20220211 11:39:47.832"/>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${num1}</var>
+<arg>${val1}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="NOT RUN" starttime="20220211 11:48:31.863" endtime="20220211 11:48:31.863"/>
 </kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:47.832" endtime="20220211 11:39:47.833"/>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${num2}</var>
+<arg>${val2}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="NOT RUN" starttime="20220211 11:48:31.863" endtime="20220211 11:48:31.863"/>
 </kw>
-<status status="PASS" starttime="20220211 11:39:47.497" endtime="20220211 11:39:47.833"/>
-</iter>
-<iter>
-<var name="${i}">1</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${elements}[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:47.851" level="INFO">${text} = Images</msg>
-<status status="PASS" starttime="20220211 11:39:47.833" endtime="20220211 11:39:47.851"/>
+<kw name="Evaluate" library="BuiltIn">
+<var>${res}</var>
+<arg>${num1}+${num2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220211 11:48:31.863" endtime="20220211 11:48:31.863"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
+<arg>${res}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:47.852" endtime="20220211 11:39:47.852"/>
+<status status="NOT RUN" starttime="20220211 11:48:31.863" endtime="20220211 11:48:31.864"/>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<arg>Click Element</arg>
-<arg>${elements}[${i}]</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:47.852" endtime="20220211 11:39:47.852"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:47.853" endtime="20220211 11:39:47.853"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:47.833" endtime="20220211 11:39:47.853"/>
-</iter>
-<iter>
-<var name="${i}">2</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${elements}[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:47.875" level="INFO">${text} = </msg>
-<status status="PASS" starttime="20220211 11:39:47.853" endtime="20220211 11:39:47.875"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:47.875" endtime="20220211 11:39:47.875"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<arg>Click Element</arg>
-<arg>${elements}[${i}]</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:47.876" endtime="20220211 11:39:47.876"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:47.876" endtime="20220211 11:39:47.877"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:47.853" endtime="20220211 11:39:47.877"/>
-</iter>
-<iter>
-<var name="${i}">3</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${elements}[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:47.896" level="INFO">${text} = Sign in</msg>
-<status status="PASS" starttime="20220211 11:39:47.877" endtime="20220211 11:39:47.896"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:47.896" endtime="20220211 11:39:47.897"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<arg>Click Element</arg>
-<arg>${elements}[${i}]</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:47.897" endtime="20220211 11:39:47.897"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:47.898" endtime="20220211 11:39:47.898"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:47.877" endtime="20220211 11:39:47.898"/>
-</iter>
-<iter>
-<var name="${i}">4</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${elements}[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:47.916" level="INFO">${text} = </msg>
-<status status="PASS" starttime="20220211 11:39:47.898" endtime="20220211 11:39:47.916"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:47.916" endtime="20220211 11:39:47.917"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<arg>Click Element</arg>
-<arg>${elements}[${i}]</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:47.917" endtime="20220211 11:39:47.917"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:47.917" endtime="20220211 11:39:47.918"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:47.898" endtime="20220211 11:39:47.918"/>
-</iter>
-<iter>
-<var name="${i}">5</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${elements}[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:48.507" level="INFO">${text} = हिन्दी</msg>
-<status status="PASS" starttime="20220211 11:39:47.919" endtime="20220211 11:39:48.560"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:48.560" endtime="20220211 11:39:48.561"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<arg>Click Element</arg>
-<arg>${elements}[${i}]</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.562" endtime="20220211 11:39:48.563"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.563" endtime="20220211 11:39:48.564"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:47.919" endtime="20220211 11:39:48.564"/>
-</iter>
-<iter>
-<var name="${i}">6</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${elements}[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:48.648" level="INFO">${text} = বাংলা</msg>
-<status status="PASS" starttime="20220211 11:39:48.565" endtime="20220211 11:39:48.648"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:48.649" endtime="20220211 11:39:48.649"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<arg>Click Element</arg>
-<arg>${elements}[${i}]</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.650" endtime="20220211 11:39:48.650"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.650" endtime="20220211 11:39:48.651"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:48.565" endtime="20220211 11:39:48.651"/>
-</iter>
-<iter>
-<var name="${i}">7</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${elements}[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:48.676" level="INFO">${text} = తెలుగు</msg>
-<status status="PASS" starttime="20220211 11:39:48.652" endtime="20220211 11:39:48.676"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:48.676" endtime="20220211 11:39:48.677"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<arg>Click Element</arg>
-<arg>${elements}[${i}]</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.677" endtime="20220211 11:39:48.677"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.678" endtime="20220211 11:39:48.678"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:48.652" endtime="20220211 11:39:48.678"/>
-</iter>
-<iter>
-<var name="${i}">8</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${elements}[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:48.697" level="INFO">${text} = मराठी</msg>
-<status status="PASS" starttime="20220211 11:39:48.678" endtime="20220211 11:39:48.697"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:48.697" endtime="20220211 11:39:48.698"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<arg>Click Element</arg>
-<arg>${elements}[${i}]</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.698" endtime="20220211 11:39:48.699"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.699" endtime="20220211 11:39:48.700"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:48.678" endtime="20220211 11:39:48.700"/>
-</iter>
-<iter>
-<var name="${i}">9</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${elements}[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:48.718" level="INFO">${text} = தமிழ்</msg>
-<status status="PASS" starttime="20220211 11:39:48.701" endtime="20220211 11:39:48.719"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:48.719" endtime="20220211 11:39:48.719"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<arg>Click Element</arg>
-<arg>${elements}[${i}]</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.719" endtime="20220211 11:39:48.720"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.720" endtime="20220211 11:39:48.720"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:48.701" endtime="20220211 11:39:48.720"/>
-</iter>
-<iter>
-<var name="${i}">10</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${elements}[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:48.739" level="INFO">${text} = ગુજરાતી</msg>
-<status status="PASS" starttime="20220211 11:39:48.721" endtime="20220211 11:39:48.739"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:48.739" endtime="20220211 11:39:48.740"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<arg>Click Element</arg>
-<arg>${elements}[${i}]</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.740" endtime="20220211 11:39:48.740"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.741" endtime="20220211 11:39:48.741"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:48.720" endtime="20220211 11:39:48.741"/>
-</iter>
-<iter>
-<var name="${i}">11</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${elements}[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:48.759" level="INFO">${text} = ಕನ್ನಡ</msg>
-<status status="PASS" starttime="20220211 11:39:48.742" endtime="20220211 11:39:48.759"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:48.759" endtime="20220211 11:39:48.760"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<arg>Click Element</arg>
-<arg>${elements}[${i}]</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.760" endtime="20220211 11:39:48.760"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.760" endtime="20220211 11:39:48.761"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:48.741" endtime="20220211 11:39:48.761"/>
-</iter>
-<iter>
-<var name="${i}">12</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${elements}[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:48.777" level="INFO">${text} = മലയാളം</msg>
-<status status="PASS" starttime="20220211 11:39:48.761" endtime="20220211 11:39:48.777"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:48.778" endtime="20220211 11:39:48.778"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<arg>Click Element</arg>
-<arg>${elements}[${i}]</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.778" endtime="20220211 11:39:48.778"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.779" endtime="20220211 11:39:48.779"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:48.761" endtime="20220211 11:39:48.779"/>
-</iter>
-<iter>
-<var name="${i}">13</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${elements}[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:48.796" level="INFO">${text} = ਪੰਜਾਬੀ</msg>
-<status status="PASS" starttime="20220211 11:39:48.780" endtime="20220211 11:39:48.796"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:48.796" endtime="20220211 11:39:48.797"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<arg>Click Element</arg>
-<arg>${elements}[${i}]</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.797" endtime="20220211 11:39:48.797"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220211 11:39:48.797" endtime="20220211 11:39:48.798"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:48.779" endtime="20220211 11:39:48.798"/>
-</iter>
-<iter>
-<var name="${i}">14</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${elements}[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:48.815" level="INFO">${text} = About</msg>
-<status status="PASS" starttime="20220211 11:39:48.798" endtime="20220211 11:39:48.815"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:39:48.815" endtime="20220211 11:39:48.815"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<arg>Click Element</arg>
-<arg>${elements}[${i}]</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${elements}[${i}]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:39:48.816" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="6d29f3fe7c658d32b9da1b29249e5dbd", element="00ca8a55-e743-435b-af4e-c7196efb3be7")&gt;'.</msg>
-<status status="PASS" starttime="20220211 11:39:48.816" endtime="20220211 11:39:49.025"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:48.815" endtime="20220211 11:39:49.025"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${text}'=='About'</arg>
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<msg timestamp="20220211 11:39:49.026" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20220211 11:39:49.025" endtime="20220211 11:39:49.027"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:48.798" endtime="20220211 11:39:49.027"/>
-</iter>
-<status status="PASS" starttime="20220211 11:39:47.496" endtime="20220211 11:39:49.027"/>
-</for>
-<status status="PASS" starttime="20220211 11:39:23.528" endtime="20220211 11:39:49.027"/>
+<status status="FAIL" starttime="20220211 11:48:31.847" endtime="20220211 11:48:31.864">No keyword with name 'Remove String' found.</status>
 </test>
-<test id="s1-s1-s1-t2" name="TC2">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=edge</arg>
-<arg>executable_path=${EXECDIR}\\drivers\\msedgedriver.exe</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220211 11:39:49.029" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
-<status status="PASS" starttime="20220211 11:39:49.029" endtime="20220211 11:39:59.161"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>30s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220211 11:39:59.161" endtime="20220211 11:39:59.167"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=http://google.com/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220211 11:39:59.168" level="INFO">Opening url 'http://google.com/'</msg>
-<status status="PASS" starttime="20220211 11:39:59.167" endtime="20220211 11:40:10.052"/>
-</kw>
-<kw name="Get Window Size" library="SeleniumLibrary">
-<var>${width}</var>
-<var>${height}</var>
-<doc>Returns current window width and height as integers.</doc>
-<msg timestamp="20220211 11:40:10.058" level="INFO">${width} = 1050</msg>
-<msg timestamp="20220211 11:40:10.058" level="INFO">${height} = 708</msg>
-<status status="PASS" starttime="20220211 11:40:10.052" endtime="20220211 11:40:10.058"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${width}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:40:10.059" endtime="20220211 11:40:10.059"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${height}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:40:10.059" endtime="20220211 11:40:10.060"/>
-</kw>
-<status status="PASS" starttime="20220211 11:39:49.028" endtime="20220211 11:40:10.060"/>
-</test>
-<test id="s1-s1-s1-t3" name="TC3 Mouse Test">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=edge</arg>
-<arg>executable_path=${EXECDIR}\\drivers\\msedgedriver.exe</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220211 11:40:10.062" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
-<status status="PASS" starttime="20220211 11:40:10.061" endtime="20220211 11:40:22.729"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>30s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220211 11:40:22.730" endtime="20220211 11:40:22.737"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://nasscom.in/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220211 11:40:22.738" level="INFO">Opening url 'https://nasscom.in/'</msg>
-<status status="PASS" starttime="20220211 11:40:22.737" endtime="20220211 11:40:42.878"/>
-</kw>
-<kw name="Mouse Over" library="SeleniumLibrary">
-<arg>xpath=//a[text()='Membership']</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220211 11:40:42.879" level="INFO">Simulating Mouse Over on element 'xpath=//a[text()='Membership']'.</msg>
-<status status="PASS" starttime="20220211 11:40:42.879" endtime="20220211 11:40:44.273"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//a[text()='Members Listing']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:40:44.275" level="INFO">Clicking element 'xpath=//a[text()='Members Listing']'.</msg>
-<status status="PASS" starttime="20220211 11:40:44.274" endtime="20220211 11:40:46.055"/>
-</kw>
-<status status="PASS" starttime="20220211 11:40:10.060" endtime="20220211 11:40:46.056"/>
-</test>
-<status status="PASS" starttime="20220211 11:39:23.110" endtime="20220211 11:40:46.058"/>
+<status status="FAIL" starttime="20220211 11:48:31.841" endtime="20220211 11:48:31.865"/>
 </suite>
-<status status="PASS" starttime="20220211 11:39:23.106" endtime="20220211 11:40:46.060"/>
+<status status="FAIL" starttime="20220211 11:48:31.834" endtime="20220211 11:48:31.866"/>
 </suite>
-<status status="PASS" starttime="20220211 11:39:23.046" endtime="20220211 11:40:46.062"/>
+<status status="FAIL" starttime="20220211 11:48:31.783" endtime="20220211 11:48:31.868"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Robotic Project">Robotic Project</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1" name="Advance Suit">Robotic Project.Advance Suit</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="Advance Selenium">Robotic Project.Advance Suit.Advance Selenium</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robotic Project">Robotic Project</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Robot Suit">Robotic Project.Robot Suit</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Demo4 Suit">Robotic Project.Robot Suit.Demo4 Suit</stat>
 </suite>
 </statistics>
 <errors>
