@@ -1,105 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 17:12:37.337" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220211 10:00:10.049" rpa="false" schemaversion="2">
 <suite id="s1" name="Robotic Project" source="C:\Users\Ramesh\Desktop\robotic project">
-<suite id="s1-s1" name="Selenium Suit" source="C:\Users\Ramesh\Desktop\robotic project\selenium_suit">
-<suite id="s1-s1-s1" name="Selenium Suit" source="C:\Users\Ramesh\Desktop\robotic project\selenium_suit\selenium_suit.robot">
+<suite id="s1-s1" name="Advance Suit" source="C:\Users\Ramesh\Desktop\robotic project\advance_suit">
+<suite id="s1-s1-s1" name="Advance Selenium" source="C:\Users\Ramesh\Desktop\robotic project\advance_suit\advance_selenium.robot">
 <test id="s1-s1-s1-t1" name="TC1">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=edge</arg>
 <arg>executable_path=${EXECDIR}\\drivers\\msedgedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220210 17:12:38.886" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
-<status status="PASS" starttime="20220210 17:12:38.886" endtime="20220210 17:12:49.242"/>
+<msg timestamp="20220211 10:00:11.689" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
+<status status="PASS" starttime="20220211 10:00:11.688" endtime="20220211 10:00:19.722"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220210 17:12:49.244" endtime="20220210 17:12:49.499"/>
+<status status="PASS" starttime="20220211 10:00:19.722" endtime="20220211 10:00:19.867"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>30s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220210 17:12:49.499" endtime="20220210 17:12:49.527"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>1s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220210 17:12:49.527" endtime="20220210 17:12:49.529"/>
+<status status="PASS" starttime="20220211 10:00:19.867" endtime="20220211 10:00:19.872"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://demo.openemr.io/b/openemr/index.php</arg>
+<arg>url=http://google.com</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220210 17:12:49.533" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/index.php'</msg>
-<status status="PASS" starttime="20220210 17:12:49.530" endtime="20220210 17:12:57.025"/>
+<msg timestamp="20220211 10:00:19.873" level="INFO">Opening url 'http://google.com'</msg>
+<status status="PASS" starttime="20220211 10:00:19.872" endtime="20220211 10:00:29.992"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=authUser</arg>
-<arg>admin</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220210 17:12:57.027" level="INFO">Typing text 'admin' into text field 'id=authUser'.</msg>
-<status status="PASS" starttime="20220210 17:12:57.026" endtime="20220210 17:13:00.356"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${linkcount}</var>
+<arg>tag=a</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220211 10:00:30.065" level="INFO">${linkcount} = 25</msg>
+<status status="PASS" starttime="20220211 10:00:29.993" endtime="20220211 10:00:30.065"/>
 </kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20220210 17:13:00.357" endtime="20220210 17:13:02.696"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${linkcount}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220211 10:00:30.066" endtime="20220211 10:00:30.068"/>
 </kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id=clearPass</arg>
-<arg>Pass</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220210 17:13:02.698" level="INFO">Typing password into text field 'id=clearPass'.</msg>
-<msg timestamp="20220210 17:13:04.878" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220210 17:13:06.111" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220210 17:13:02.697" endtime="20220210 17:13:06.112"/>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{elements}</var>
+<arg>tag=0</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220211 10:00:49.754" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220211 10:00:49.903" level="FAIL">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DC0473B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBC4BB57+885959]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBC4ED68+898776]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBC87958+1131208]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBCBAB3F+1340591]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBCA30AF+1243679]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBCB7BDC+1328460]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBCA2ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBC783C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBC794E8+1072728]
+	Ordinal0 [0x00007FF7DBAD5ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF7DBD582F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DBF223D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF7DBD21B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DC03C553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DC03BE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DC03BCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DBF961F3+477603]
+	BaseThreadInitThunk [0x00007FFEB0AE7BD4+20]
+	RtlUserThreadStart [0x00007FFEB166CE51+33]
+</msg>
+<status status="FAIL" starttime="20220211 10:00:30.069" endtime="20220211 10:00:49.903"/>
 </kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>name=languageChoice</arg>
-<arg>English (Indian)</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20220210 17:13:06.115" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
-<status status="PASS" starttime="20220210 17:13:06.113" endtime="20220210 17:13:16.238"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${elements}[0]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220211 10:00:49.905" endtime="20220211 10:00:49.906"/>
 </kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>0</value>
+<value>${linkcount}</value>
+<value>1</value>
+<iter>
+<var name="${i}">${i}</var>
 <kw name="Get Text" library="SeleniumLibrary">
-<var>${appdesc}</var>
-<arg>xpath=//p[contains(text(),'most')]</arg>
+<var>${text}</var>
+<arg>${elements}[${i}]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220210 17:13:18.370" level="INFO">${appdesc} = The most popular open-source Electronic Health Record and Medical Practice Management solution.</msg>
-<status status="PASS" starttime="20220210 17:13:16.239" endtime="20220210 17:13:18.371"/>
+<status status="NOT RUN" starttime="20220211 10:00:49.907" endtime="20220211 10:00:49.907"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${appdesc}</arg>
+<arg>${text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220210 17:13:18.373" endtime="20220210 17:13:18.375"/>
+<status status="NOT RUN" starttime="20220211 10:00:49.908" endtime="20220211 10:00:49.908"/>
 </kw>
-<kw name="Get Selected List Label" library="SeleniumLibrary">
-<var>${selecteddropdownlabel}</var>
-<arg>name=languageChoice</arg>
-<doc>Returns the label of selected option from selection list ``locator``.</doc>
-<msg timestamp="20220210 17:13:40.375" level="INFO">${selecteddropdownlabel} = English (Indian)</msg>
-<status status="PASS" starttime="20220210 17:13:18.375" endtime="20220210 17:13:40.376"/>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${text}'=='Images'</arg>
+<arg>Click Element</arg>
+<arg>${elements}[${i}]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20220211 10:00:49.908" endtime="20220211 10:00:49.908"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${selecteddropdownlabel}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220210 17:13:40.378" endtime="20220210 17:13:40.382"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${text}'=='Images'</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20220211 10:00:49.909" endtime="20220211 10:00:49.909"/>
 </kw>
-<status status="PASS" starttime="20220210 17:12:38.885" endtime="20220210 17:13:40.385"/>
+<status status="NOT RUN" starttime="20220211 10:00:49.906" endtime="20220211 10:00:49.909"/>
+</iter>
+<status status="NOT RUN" starttime="20220211 10:00:49.906" endtime="20220211 10:00:49.909"/>
+</for>
+<status status="FAIL" starttime="20220211 10:00:11.686" endtime="20220211 10:00:49.910">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DC0473B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBC4BB57+885959]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBC4ED68+898776]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBC87958+1131208]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBCBAB3F+1340591]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBCA30AF+1243679]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBCB7BDC+1328460]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBCA2...
+    [ Message content over the limit has been removed. ]
+...Applications::Events::EventProperty::to_string [0x00007FF7DBC783C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7DBC794E8+1072728]
+	Ordinal0 [0x00007FF7DBAD5ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF7DBD582F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DBF223D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF7DBD21B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DC03C553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DC03BE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DC03BCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7DBF961F3+477603]
+	BaseThreadInitThunk [0x00007FFEB0AE7BD4+20]
+	RtlUserThreadStart [0x00007FFEB166CE51+33]</status>
 </test>
-<status status="PASS" starttime="20220210 17:12:37.491" endtime="20220210 17:13:40.401"/>
+<status status="FAIL" starttime="20220211 10:00:10.272" endtime="20220211 10:00:49.952"/>
 </suite>
-<status status="PASS" starttime="20220210 17:12:37.485" endtime="20220210 17:13:40.439"/>
+<status status="FAIL" starttime="20220211 10:00:10.259" endtime="20220211 10:00:49.963"/>
 </suite>
-<status status="PASS" starttime="20220210 17:12:37.343" endtime="20220210 17:13:40.476"/>
+<status status="FAIL" starttime="20220211 10:00:10.070" endtime="20220211 10:00:49.970"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Robotic Project">Robotic Project</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Selenium Suit">Robotic Project.Selenium Suit</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Selenium Suit">Robotic Project.Selenium Suit.Selenium Suit</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robotic Project">Robotic Project</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Advance Suit">Robotic Project.Advance Suit</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Advance Selenium">Robotic Project.Advance Suit.Advance Selenium</stat>
 </suite>
 </statistics>
 <errors>
