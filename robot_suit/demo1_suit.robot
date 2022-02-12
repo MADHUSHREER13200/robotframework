@@ -3,6 +3,7 @@ Library  DateTime
 
 *** Test Cases ***
 Tc1 print Name
+     [Tags]  high
      Log To Console     ${EXECDIR}\\drivers\\edgedriver
      Log To Console     Madhuri
 
@@ -12,6 +13,7 @@ Tc2 print Date
 
 
 Tc3 Store Data
+     [Tags]  high
       Set Local Variable    ${name}         Madhuri
       Log To Console    ${name}
       Log   hello,${name}
@@ -24,7 +26,9 @@ Tc4 Add Number
       ${res}        Evaluate   ${num1}+${num2}
 
       Log To Console        ${res}
+
 Tc5 AreabOf Circle
+     [Tags]  high
       Set Local Variable       ${radius}   10
       ${res}     Evaluate   3.14*${radius}*${radius}
       Log To Console    ${res}
@@ -39,6 +43,7 @@ Tc6 If cond
       END
 
 Tc7 For loop
+     [Tags]  high
         FOR  ${i}   IN RANGE    1      11      1
             Log To Console  ${i}
         END
